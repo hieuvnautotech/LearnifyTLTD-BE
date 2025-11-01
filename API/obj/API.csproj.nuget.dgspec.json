@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Learnify-TL-TuDau\\API\\API.csproj": {}
+    "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\API\\API.csproj": {}
   },
   "projects": {
-    "F:\\Learnify-TL-TuDau\\API\\API.csproj": {
+    "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Learnify-TL-TuDau\\API\\API.csproj",
+        "projectUniqueName": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "F:\\Learnify-TL-TuDau\\API\\API.csproj",
+        "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\API\\API.csproj",
         "packagesPath": "C:\\Users\\hieuv_sno8lbi\\.nuget\\packages\\",
-        "outputPath": "F:\\Learnify-TL-TuDau\\API\\obj\\",
+        "outputPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "F:\\Learnify-TL-TuDau\\Core\\Core.csproj": {
-                "projectPath": "F:\\Learnify-TL-TuDau\\Core\\Core.csproj"
+              "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\Core.csproj": {
+                "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\Core.csproj"
               },
-              "F:\\Learnify-TL-TuDau\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "F:\\Learnify-TL-TuDau\\Infrastructure\\Infrastructure.csproj"
+              "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -62,6 +62,8 @@
               "version": "[9.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.10, )"
             }
@@ -89,14 +91,14 @@
         }
       }
     },
-    "F:\\Learnify-TL-TuDau\\Core\\Core.csproj": {
+    "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Learnify-TL-TuDau\\Core\\Core.csproj",
+        "projectUniqueName": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "F:\\Learnify-TL-TuDau\\Core\\Core.csproj",
+        "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\hieuv_sno8lbi\\.nuget\\packages\\",
-        "outputPath": "F:\\Learnify-TL-TuDau\\Core\\obj\\",
+        "outputPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -117,8 +119,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "F:\\Learnify-TL-TuDau\\Entity\\Entity.csproj": {
-                "projectPath": "F:\\Learnify-TL-TuDau\\Entity\\Entity.csproj"
+              "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj": {
+                "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj"
               }
             }
           }
@@ -158,14 +160,14 @@
         }
       }
     },
-    "F:\\Learnify-TL-TuDau\\Entity\\Entity.csproj": {
+    "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Learnify-TL-TuDau\\Entity\\Entity.csproj",
+        "projectUniqueName": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "F:\\Learnify-TL-TuDau\\Entity\\Entity.csproj",
+        "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\hieuv_sno8lbi\\.nuget\\packages\\",
-        "outputPath": "F:\\Learnify-TL-TuDau\\Entity\\obj\\",
+        "outputPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -223,14 +225,14 @@
         }
       }
     },
-    "F:\\Learnify-TL-TuDau\\Infrastructure\\Infrastructure.csproj": {
+    "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Learnify-TL-TuDau\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "F:\\Learnify-TL-TuDau\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\hieuv_sno8lbi\\.nuget\\packages\\",
-        "outputPath": "F:\\Learnify-TL-TuDau\\Infrastructure\\obj\\",
+        "outputPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -251,11 +253,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "F:\\Learnify-TL-TuDau\\Core\\Core.csproj": {
-                "projectPath": "F:\\Learnify-TL-TuDau\\Core\\Core.csproj"
+              "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\Core.csproj": {
+                "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\Core.csproj"
               },
-              "F:\\Learnify-TL-TuDau\\Entity\\Entity.csproj": {
-                "projectPath": "F:\\Learnify-TL-TuDau\\Entity\\Entity.csproj"
+              "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj": {
+                "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj"
               }
             }
           }
@@ -276,6 +278,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.10, )"
