@@ -1,27 +1,24 @@
+using Core.Interfaces;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
+// 1️⃣ Đăng ký DbContext
+builder.Services.AddDbContext<StoreContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// 2️⃣ Đăng ký Repository pattern
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+// 3️⃣ Các service mặc định
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ✅ Add EF Core + SQLite
-builder.Services.AddDbContext<StoreContext>(opt =>
-{
-    opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-
 var app = builder.Build();
 
-// ✅ Ensure DB is created
-using var scope = app.Services.CreateScope();
-var context = scope.ServiceProvider.GetRequiredService<StoreContext>();
-await context.Database.MigrateAsync();
-
-// Configure the HTTP request pipeline
+// 4️⃣ Middleware pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
