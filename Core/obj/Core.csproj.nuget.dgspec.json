@@ -1,39 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\Core.csproj": {}
+    "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\Core\\Core.csproj": {}
   },
   "projects": {
-    "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\Core.csproj": {
+    "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\Core.csproj",
+        "projectUniqueName": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\hieuv_sno8lbi\\.nuget\\packages\\",
-        "outputPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Core\\obj\\",
+        "projectPath": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Hieu\\.nuget\\packages\\",
+        "outputPath": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\hieuv_sno8lbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Hieu\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj": {
-                "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj"
+              "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\Entity\\Entity.csproj": {
+                "projectPath": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\Entity\\Entity.csproj"
               }
             }
           }
@@ -48,7 +42,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -69,32 +63,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj": {
+    "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj",
+        "projectUniqueName": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\Entity.csproj",
-        "packagesPath": "C:\\Users\\hieuv_sno8lbi\\.nuget\\packages\\",
-        "outputPath": "F:\\Git-Learnify-TL-TD-BE\\LearnifyTLTD-BE\\Entity\\obj\\",
+        "projectPath": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\Hieu\\.nuget\\packages\\",
+        "outputPath": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\Entity\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\hieuv_sno8lbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Hieu\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -113,7 +101,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -134,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
