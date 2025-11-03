@@ -17,6 +17,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+// ✅ Thêm đoạn seed
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<StoreContext>();
+    await context.Database.MigrateAsync(); // Tự migrate DB nếu chưa có
+    await StoreContextSeed.SeedAsync(context); // Gọi seed
+}
 
 // 4️⃣ Middleware pipeline
 if (app.Environment.IsDevelopment())

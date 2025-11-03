@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\API\\API.csproj": {}
+    "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\api\\API.csproj": {}
   },
   "projects": {
-    "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\API\\API.csproj": {
+    "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\API\\API.csproj",
+        "projectUniqueName": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\API\\API.csproj",
+        "projectPath": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\api\\API.csproj",
         "packagesPath": "C:\\Users\\Hieu\\.nuget\\packages\\",
-        "outputPath": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\API\\obj\\",
+        "outputPath": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hieu\\AppData\\Roaming\\NuGet\\NuGet.Config"

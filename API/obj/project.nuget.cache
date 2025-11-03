@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jbjhEdsSiNc=",
+  "dgSpecHash": "rc5/c7/5BFM=",
   "success": true,
-  "projectFilePath": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\API\\API.csproj",
+  "projectFilePath": "E:\\udemy\\bt_tulam\\LearnifyTLTD-BE\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hieu\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Hieu\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",
