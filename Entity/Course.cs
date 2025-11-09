@@ -14,5 +14,9 @@ namespace Entity
         public string Level { get; set; }
         public string Language { get; set; }
         public DateTime LastUpdated { get; set; } = DateTime.UtcNow;
+        public bool Published { get; set; }
+        // Quan hệ Category
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }  // navigation
     }
 }

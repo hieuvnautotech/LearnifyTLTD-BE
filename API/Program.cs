@@ -15,6 +15,9 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+// using AutoMapper; using System.Reflection; (nếu cần)
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+// hoặc chỉ rõ assembly: typeof(MappingProfiles).Assembly
 
 var app = builder.Build();
 // ✅ Thêm đoạn seed
