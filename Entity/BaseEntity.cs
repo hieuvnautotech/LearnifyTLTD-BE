@@ -1,9 +1,7 @@
-using System;
-
 namespace Entity
 {
     public class BaseEntity
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public int Id { get; set; }
     }
 }

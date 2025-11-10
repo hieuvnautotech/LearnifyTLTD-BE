@@ -1,10 +1,11 @@
-// Entity/Category.cs
+using System.Collections.Generic;
+
 namespace Entity
 {
-    public class Category : BaseEntity // nếu BaseEntity của mày là Guid thì đổi lại; ở Learnify dùng int
+    public class Category : BaseEntity
     {
-        public string Name { get; set; } = string.Empty;
-        public string? Description { get; set; }
+        public string Name { get; set; }
+
         public ICollection<Course> Courses { get; set; } = new List<Course>();
     }
 }

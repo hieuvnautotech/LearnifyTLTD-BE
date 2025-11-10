@@ -1,42 +1,78 @@
 using Core.Interfaces;
 using Infrastructure.Data;
+using Infrastructure.Helpers;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1️⃣ Đăng ký DbContext
+// ===============================
+// 1. Đăng ký DbContext
+// ===============================
 builder.Services.AddDbContext<StoreContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+{
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
-// 2️⃣ Đăng ký Repository pattern
+// ===============================
+// 2. Đăng ký Repository Pattern
+// ===============================
+// Dùng chung cho Course, Category, Lecture,...
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
-// 3️⃣ Các service mặc định
+// ===============================
+// 3. Đăng ký AutoMapper
+// ===============================
+builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
+
+// ===============================
+// 4. Đăng ký Controller + Swagger
+// ===============================
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-// using AutoMapper; using System.Reflection; (nếu cần)
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-// hoặc chỉ rõ assembly: typeof(MappingProfiles).Assembly
 
 var app = builder.Build();
-// ✅ Thêm đoạn seed
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<StoreContext>();
-    await context.Database.MigrateAsync(); // Tự migrate DB nếu chưa có
-    await StoreContextSeed.SeedAsync(context); // Gọi seed
-}
 
-// 4️⃣ Middleware pipeline
+// ===============================
+// 5. Middleware xử lý Exception
+// ===============================
+// PHẢI đặt TRÊN MapControllers()
+app.UseMiddleware<API.Middleware.ExceptionMiddleware>();
+
+// ===============================
+// 6. Swagger (DEV environment)
+// ===============================
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+// ===============================
+// 7. Http
+// ===============================
 app.UseHttpsRedirection();
+
 app.UseAuthorization();
+
+// ===============================
+// 8. Map API routes
+// ===============================
 app.MapControllers();
+
+// ===============================
+// 9. Seed database + Migration (nếu cần)
+// ===============================
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<StoreContext>();
+
+    await context.Database.MigrateAsync(); // chạy migration
+    await StoreContextSeed.SeedAsync(context); // chạy seed nếu có
+}
+
+// ===============================
+// 10. Run app
+// ===============================
 app.Run();
