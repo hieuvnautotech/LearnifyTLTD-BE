@@ -10,10 +10,10 @@ namespace API.Controllers
     [Route("api/[controller]")]
     public class CategoriesController : ControllerBase
     {
-        private readonly IGenericRepository<Category> _repo;
+        private readonly ICategoryRepository _repo;
         private readonly IMapper _mapper;
 
-        public CategoriesController(IGenericRepository<Category> repo, IMapper mapper)
+        public CategoriesController(ICategoryRepository repo, IMapper mapper)
         {
             _repo = repo;
             _mapper = mapper;
@@ -27,7 +27,7 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<CategoryDto>> GetCategory(int id)
+        public async Task<ActionResult<CategoryDto>> GetCategory(Guid id)
         {
             var cat = await _repo.GetByIdAsync(id);
             if (cat == null) return NotFound();

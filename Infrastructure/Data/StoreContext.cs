@@ -1,24 +1,24 @@
 ﻿using Entity;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Data
+namespace Infrastructure.Data;
+
+public class StoreContext : DbContext
 {
-    public class StoreContext : DbContext
+    public StoreContext(DbContextOptions options) : base(options)
     {
-        public StoreContext(DbContextOptions options) : base(options) { }
+    }
 
-        public DbSet<Course> Courses { get; set; }
-        public DbSet<Category> Categories { get; set; }
+    public DbSet<Course> Courses => Set<Course>();
+    public DbSet<Category> Categories => Set<Category>();
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-            // 1-n: Category có nhiều Course
-            builder.Entity<Course>()
-            .HasOne(c => c.Category)
-            .WithMany(cat => cat.Courses)
-            .HasForeignKey(c => c.CategoryId)
-            .OnDelete(DeleteBehavior.Restrict); // tránh xoá dây chuyền ngoài ý muốn
-        }
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+
+        builder.Entity<Category>()
+            .HasMany(c => c.Courses)
+            .WithOne(c => c.Category!)
+            .HasForeignKey(c => c.CategoryId);
     }
 }
