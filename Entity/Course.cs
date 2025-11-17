@@ -1,31 +1,34 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using Entity;
 
-namespace Entity
+namespace Learnify.Entity.Models
 {
-    public class Course : BaseEntity   // BaseEntity chứa Guid Id
+    public class Course : BaseEntity
     {
-        public string Title { get; set; } = string.Empty;
+        [Required]
+        public string Title { get; set; } = default!;
+        public string Language { get; set; } = "en";
+        public string Level { get; set; } = "Beginner";
         public string SubTitle { get; set; } = string.Empty;
-        public string Description { get; set; } = string.Empty;
-
-        public float Price { get; set; }
-        public string Instructor { get; set; } = string.Empty;
-
-        public decimal Rating { get; set; } = 0;
         public int Students { get; set; } = 0;
-
-        public string Image { get; set; } =
-            "https://learnify-assets.s3.amazonaws.com/Images/learnify.png";
-
-        public string Level { get; set; } = string.Empty;
-        public string Language { get; set; } = string.Empty;
-
+        public string Description { get; set; } = string.Empty;
+        public decimal Price { get; set; } = 0m;
+        public string Instructor { get; set; } = string.Empty;
         public bool Published { get; set; } = false;
+        public string Image { get; set; } = "https://learnify-assets.s3.amazonaws.com/Images/learnify.png";
+        public decimal Rating { get; set; } = 0m;
+
+        public ICollection<Requirement> Requirements { get; set; } = new List<Requirement>();
+        public ICollection<Learning> Learnings { get; set; } = new List<Learning>();
+
+        public Guid? CategoryId { get; set; }
+        public Category? Category { get; set; }
 
         public DateTime LastUpdated { get; set; } = DateTime.UtcNow;
 
-        // ✅ Quan hệ Category (Guid chuẩn sạch)
-        public Guid CategoryId { get; set; }
-        public Category? Category { get; set; }
+        public ICollection<UserCourse> UserCourses { get; set; } = new List<UserCourse>();
+        public ICollection<Section> Sections { get; set; } = new List<Section>();
     }
 }

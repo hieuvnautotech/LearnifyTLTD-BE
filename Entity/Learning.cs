@@ -1,15 +1,15 @@
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Entity;
 
 namespace Learnify.Entity.Models
 {
-    public class Category : BaseEntity
+    public class Learning : BaseEntity
     {
         [Required]
         public string Name { get; set; } = default!;
 
-        public ICollection<Course> Courses { get; set; } = new List<Course>();
+        public Guid CourseId { get; set; }
+        public Course? Course { get; set; }
     }
 }
