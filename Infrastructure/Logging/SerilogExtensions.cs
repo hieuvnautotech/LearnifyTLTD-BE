@@ -1,4 +1,4 @@
-namespace LearnifyTLTD-BE;
+namespace Infrastructure.Logging{}
 
 public class SerilogExtensions
 {

@@ -1,8 +1,8 @@
-using API.Dto;
-using AutoMapper;
-using Core.Interfaces;
-using Entity;
 using Microsoft.AspNetCore.Mvc;
+using API.Dtos.Category;
+using Core.Interfaces;
+using System;
+using System.Threading.Tasks;
 
 namespace API.Controllers
 {
@@ -10,29 +10,6 @@ namespace API.Controllers
     [Route("api/[controller]")]
     public class CategoriesController : ControllerBase
     {
-        private readonly ICategoryRepository _repo;
-        private readonly IMapper _mapper;
-
-        public CategoriesController(ICategoryRepository repo, IMapper mapper)
-        {
-            _repo = repo;
-            _mapper = mapper;
-        }
-
-        [HttpGet]
-        public async Task<ActionResult<List<CategoryDto>>> GetCategories()
-        {
-            var categories = await _repo.ListAllAsync();
-            return Ok(_mapper.Map<List<CategoryDto>>(categories));
-        }
-
-        [HttpGet("{id}")]
-        public async Task<ActionResult<CategoryDto>> GetCategory(Guid id)
-        {
-            var cat = await _repo.GetByIdAsync(id);
-            if (cat == null) return NotFound();
-
-            return Ok(_mapper.Map<CategoryDto>(cat));
-        }
+        // ... rest of controller
     }
 }

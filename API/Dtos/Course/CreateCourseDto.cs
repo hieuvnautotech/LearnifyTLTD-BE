@@ -1,4 +1,4 @@
-namespace Learnify.Core.DTOs
+namespace API.Dtos.Course
 {
     public class CreateCourseDto
     {

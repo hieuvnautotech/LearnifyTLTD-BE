@@ -1,4 +1,4 @@
-namespace LearnifyTLTD-BE;
+namespace API.Dtos.Course{}
 
 public class UpdateCourseDto
 {

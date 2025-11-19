@@ -1,4 +1,4 @@
-namespace LearnifyTLTD-BE;
+namespace API.Extensions{}
 
 public class SwaggerExtensions
 {

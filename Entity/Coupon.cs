@@ -1,7 +1,8 @@
 using System;
 using Entity;
 
-namespace Learnify.Entity.Models
+namespace Entity
+
 {
     public class Coupon : BaseEntity
     {

@@ -1,6 +1,6 @@
-namespace LearnifyTLTD-BE;
-
-public class CourseService
+namespace Infrastructure.Services
+{}
+public class BasketService
 {
     
 }

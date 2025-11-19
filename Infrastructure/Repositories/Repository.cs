@@ -1,4 +1,4 @@
-namespace LearnifyTLTD-BE;
+namespace Infrastructure.Repositories{}
 
 public class Repository
 {

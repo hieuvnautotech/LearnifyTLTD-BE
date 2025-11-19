@@ -1,4 +1,5 @@
-namespace LearnifyTLTD-BE;
+namespace API.Middleware{}
+
 
 public class RequestLoggingMiddleware
 {

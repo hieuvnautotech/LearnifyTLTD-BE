@@ -1,19 +1,18 @@
 using AutoMapper;
+using API.Dtos.Course;
+using API.Dtos.Category;
 using Entity;
-using API.Dto;
 
-namespace Infrastructure.Helpers;
-
-public class MappingProfiles : Profile
+namespace API.MappingProfiles
 {
-    public MappingProfiles()
+    public class MappingProfiles : Profile
     {
-        CreateMap<Category, CategoryDto>();
-
-        CreateMap<Course, CourseDto>()
-                .ForMember(d => d.Category, o => o.MapFrom(s => s.Category != null ? s.Category.Name : string.Empty))
-                .ForMember(d => d.Image, o => o.MapFrom(s => string.IsNullOrEmpty(s.Image)
-                    ? "https://learnify-assets.s3.amazonaws.com/Images/learnify.png"
-                    : s.Image));
+        public MappingProfiles()
+        {
+            CreateMap<Course, CourseDto>()
+                .ForMember(d => d.CategoryName, o => o.MapFrom(s => s.Category != null ? s.Category.Name : ""));
+            
+            CreateMap<Category, CategoryDto>();
+        }
     }
 }

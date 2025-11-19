@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using Entity;
 
-namespace Learnify.Entity.Models
+namespace Entity
+
 {
     public class OrderItem : BaseEntity
     {

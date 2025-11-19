@@ -1,6 +1,8 @@
-namespace LearnifyTLTD-BE;
+using Entity;
 
-public class CourseService
+namespace Infrastructure.Services
 {
-    
+    public class CourseService
+    {
+    }
 }

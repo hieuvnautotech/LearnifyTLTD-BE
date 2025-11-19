@@ -1,12 +1,13 @@
+using System;
 using Entity;
 
 namespace Core.Specifications
 {
     public class CourseWithCategorySpecification : BaseSpecification<Course>
     {
-        public CourseWithCategorySpecification(string search, int? categoryId, string sort, int skip, int take)
+        public CourseWithCategorySpecification(string search, Guid? categoryId, string sort, int skip, int take)
             : base(x =>
-                (string.IsNullOrEmpty(search) || x.Title.ToLower().Contains(search)) &&
+                (string.IsNullOrEmpty(search) || x.Title.ToLower().Contains(search.ToLower())) &&
                 (!categoryId.HasValue || x.CategoryId == categoryId))
         {
             AddInclude(x => x.Category);
@@ -19,9 +20,11 @@ namespace Core.Specifications
                     case "priceAsc":
                         AddOrderBy(x => x.Price);
                         break;
+
                     case "priceDesc":
                         AddOrderByDescending(x => x.Price);
                         break;
+
                     default:
                         AddOrderBy(x => x.Title);
                         break;

@@ -1,6 +1,11 @@
-namespace LearnifyTLTD-BE;
+using Microsoft.AspNetCore.Mvc;
 
-public class SectionsController
+namespace API.Controllers
 {
-    
+    [ApiController]
+    [Route("api/[controller]")]
+    public class SectionsController : ControllerBase
+    {
+        // code...
+    }
 }

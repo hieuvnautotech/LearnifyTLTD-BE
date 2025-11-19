@@ -1,4 +1,4 @@
-namespace LearnifyTLTD-BE;
+namespace API.Controllers{}
 
 public class UserCoursesController
 {

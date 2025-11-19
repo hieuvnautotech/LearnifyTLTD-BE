@@ -1,4 +1,4 @@
-namespace LearnifyTLTD-BE;
+namespace API.MappingProfiles{}
 
 public class CourseMappingProfile
 {

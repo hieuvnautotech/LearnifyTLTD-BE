@@ -1,6 +1,6 @@
-namespace LearnifyTLTD-BE;
+namespace Infrastructure.Services{}
 
-public class CourseService
+public class OrderService
 {
     
 }

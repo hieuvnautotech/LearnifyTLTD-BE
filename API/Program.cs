@@ -1,6 +1,6 @@
+using API.MappingProfiles;
 using Core.Interfaces;
 using Infrastructure.Data;
-using Infrastructure.Helpers;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

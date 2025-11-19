@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 using Entity;
 
-namespace Learnify.Entity.Models
+namespace Entity
+
 {
     public class Learning : BaseEntity
     {
